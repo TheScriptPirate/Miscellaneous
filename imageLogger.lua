@@ -1,4 +1,4 @@
-## by luakiller
+## by p1rate_00 & luakiller
 
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
