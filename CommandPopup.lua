@@ -103,6 +103,13 @@ function Library:CreatePopup(Title, Text)
     UIPadding_2.PaddingRight = UDim.new(0, 6)
     UIPadding_2.PaddingTop = UDim.new(0, 6)
 
+    local targetPosition1 = UDim2.new(0.85, 0,0.86, 0)
+	local tweenInfo1 = TweenInfo.new(2, Enum.EasingStyle.Exponential)
+	local tween1 = TweenService:Create(PopupHolder_1, tweenInfo1, {Position = targetPosition1})
+	local targetPosition2 = UDim2.new(1.2, 0,0.86, 0)
+	local tweenInfo2 = TweenInfo.new(2, Enum.EasingStyle.Exponential)
+	local tween2 = TweenService:Create(PopupHolder_1, tweenInfo2, {Position = targetPosition2})
+    
     tween1:Play()
     wait(6)
     tween2:Play()
