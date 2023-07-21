@@ -1,8 +1,9 @@
 local TweenService = game:GetService("TweenService")
 local Player = game.Players.LocalPlayer
 
-local function CreatePopup(Title, Text)
-    -- Check if there's an existing popup and destroy it
+local Library = {}
+
+function Library:CreatePopup(Title, Text)
     if game.CoreGui:FindFirstChild("CommandHub") then
         game.CoreGui:FindFirstChild("CommandHub"):Destroy()
     end
@@ -111,10 +112,8 @@ local function CreatePopup(Title, Text)
     local tweenInfo2 = TweenInfo.new(2, Enum.EasingStyle.Exponential)
     local tween2 = TweenService:Create(PopupHolder_1, tweenInfo2, { Position = targetPosition2 })
 
-    -- (Rest of the code...)
-
     tween1:Play()
     wait(6)
     tween2:Play()
 end
-return CreatePopup
+return Library
